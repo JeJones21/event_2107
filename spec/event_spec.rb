@@ -12,5 +12,9 @@ RSpec.describe Event do
     it "exists" do
       expect(@event).to be_a(Event)
     end
-  end 
+
+    it "has readable attributes" do
+      expect(@event.name).to eq("South Pearl Street Farmers Market")
+    end
+  end
 end
