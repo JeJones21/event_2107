@@ -52,4 +52,7 @@ class Event
    end
    overstocked_items
   end
+
+  def sorted_item_list
+    #not happening.. not enough time yet again.
 end
