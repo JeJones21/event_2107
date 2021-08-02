@@ -38,4 +38,18 @@ class Event
     end
     total_inventory
   end
+
+  def overstocked_items
+    #an item is overstocked if more than 1 truck sells it AND total quantity is > 50.
+    #create an accumulator
+    #iterate over the total_inventory
+    #add item to the accumulator if quantity > 50 && more than 1 truck.
+    overstocked_items = []
+    total_inventory.each do |item, info|
+     if info[:quantity] > 50 && info[:food_trucks].length > 1
+       overstocked_items << item
+     end
+   end
+   overstocked_items
+  end
 end
